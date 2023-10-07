@@ -7,7 +7,7 @@ export default defineEventHandler((event) => {
       event.request.removeHeader("Authorization");
       var rand = Math.floor(Math.random() * deepl_keys.length);
       var deepl_key = deepl_keys[rand];
-      event.request.headers.append("Authorization", `DeepL-Auth-Key ${deepl_key});
+      event.request.headers.append("Authorization", `DeepL-Auth-Key ${deepl_key}`);
     }
   }
 })
