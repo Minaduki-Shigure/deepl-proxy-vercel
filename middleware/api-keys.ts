@@ -1,5 +1,6 @@
 export default defineEventHandler((event) => {
   if (getRequestURL(event)) {
+    return { hello: 'world' };
     var headers = event.request.headers;
     var deepl_keys = process.env.DEEPL_KEYS.split(",");
     var expected_key = process.env.PSEUDO_DEEPL_KEY;
